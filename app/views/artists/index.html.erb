@@ -9,6 +9,8 @@
       <% artist.photos.each do |photo| %>
       <%= image_tag photo.image %>
       <p><%= link_to "#{artist.name}", artist_path(artist.id) %></p>
+      <%= link_to "[Delete]", artist_path( artist.id ), method: :delete, data: { confirm: "Are you sure?" } %>
+
       <%end %>
 
   <% end %>
