@@ -1,0 +1,31 @@
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+* {
+  margin-left: 40px;
+  margin-top: 10px;
+  box-sizing: inherit;
+}
+ div.col-sm-6 col-md-3 {
+     display: block;
+     margin-top: auto;
+     margin-left: 40px;
+
+ }
+
+ .thumbnail {
+     display: block;
+     padding: 4px;
+     line-height: 1.42857143;
+     background-color: #fff;
+     border: 0px solid #f5f5f5;
+     border-radius: 4px;
+     -webkit-transition: border 0.2s ease-in-out;
+     -o-transition: border 0.2s ease-in-out;
+     transition: border 0.2s ease-in-out;
+ }
+
+button.btn btn-danger{
+
+}

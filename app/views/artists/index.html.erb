@@ -4,15 +4,18 @@
 <p>  <%=link_to "order by name z-a", :sort => "name DESC" %></p>
 
 <hr>
-<div>
-  <% @artists.each do |artist| %>
-      <% artist.photos.each do |photo| %>
-      <%= image_tag photo.image %>
-      <p><%= link_to "#{artist.name}", artist_path(artist.id) %></p>
-      <%= link_to "[Delete]", artist_path( artist.id ), method: :delete, data: { confirm: "Are you sure?" } %>
-
-      <%end %>
-
-  <% end %>
-
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <div class="caption">
+      <p>  <% @artists.each do |artist| %> </p>
+          <% artist.photos.each do |photo| %>
+            <%= image_tag photo.image.thumbnail %>
+            <p><%= link_to "#{artist.name}", artist_path(artist.id) %></p>
+            <%= link_to "[Delete]", artist_path( artist.id ), method: :delete, data: { confirm: "Are you sure?" } %>
+          <%end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

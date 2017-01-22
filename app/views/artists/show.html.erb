@@ -4,13 +4,19 @@
 
 
 <hr>
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <div class="caption">
+        <% @songs.each do |song| %>
+          <% if song.artist[:id] == @artist[:id] %>
+            <p><%= song.title %>
+            <%= link_to "[Delete]", artist_song_path( @artist, song ), method: :delete, data: { confirm: "Are you sure?" } %></p>
+          <%end%>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>
 
-<% @songs.each do |song| %>
-  <% if song.artist[:id] == @artist[:id] %>
-      <p><%= song.title %></p>
-      <p><%= link_to "[Delete]", artist_song_path( @artist, song ), method: :delete, data: { confirm: "Are you sure?" } %></p>
-  <%end%>
-<%end%>
-
-
-<%= link_to "[TERUG]", artists_path%>
+<button type="button" class="btn btn-default"><%= link_to "TERUG]", artists_path%></button>
