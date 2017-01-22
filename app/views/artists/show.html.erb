@@ -1,7 +1,13 @@
 <h2><%= @artist.name %></h2>
 
+ <%= render 'songs/form' %>
+
+
+<hr>
+
 <% @songs.each do |song| %>
   <% if song.artist[:id] == @artist[:id] %>
-    <p><%= song.title %></p>
+      <p><%= song.title %></p>
   <%end%>
+
 <%end%>
