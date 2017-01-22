@@ -1,5 +1,11 @@
 <h1> All Artists in Database</h1>
 
+<p>  <%=link_to "order by name a-z", :sort => "name ASC" %></p>
+<p>  <%=link_to "order by name z-a", :sort => "name DESC" %></p>
+
+<hr> 
+<div>
 <% @artists.each do |artist| %>
 <p><%= link_to "#{artist.name}", artist_path(artist.id) %></p>
 <% end %>
+</div>
