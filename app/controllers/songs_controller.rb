@@ -18,13 +18,13 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
     @song.destroy
 
-  redirect_to @song.artist, notice: "Are you sure??"
+  redirect_to @artist, notice: "Are you sure??"
   end
 
 private
 
 def song_params
-    params.require(:song).permit(:title, :artist_id)
+    params.require(:song).permit(:title)
   end
 
 
