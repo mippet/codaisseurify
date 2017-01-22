@@ -18,7 +18,7 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
     @song.destroy
 
-  redirect_to @artist, notice: "Are you sure??"
+  redirect_to @song.artist, notice: "Are you sure??"
   end
 
 private

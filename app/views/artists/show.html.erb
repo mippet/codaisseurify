@@ -8,7 +8,7 @@
 <% @songs.each do |song| %>
   <% if song.artist[:id] == @artist[:id] %>
       <p><%= song.title %></p>
-      <p><%= link_to "[Delete]", artist_song_path( song.id ), method: :delete, data: { confirm: "Are you sure?" } %></p>
+      <p><%= link_to "[Delete]", artist_song_path( @artist, song ), method: :delete, data: { confirm: "Are you sure?" } %></p>
   <%end%>
 <%end%>
 
