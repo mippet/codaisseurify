@@ -14,6 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 
 gem 'carrierwave', '0.11.2'
+gem 'cloudinary', '1.2.3'
 
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
