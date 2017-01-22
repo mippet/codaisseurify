@@ -3,9 +3,14 @@
 <p>  <%=link_to "order by name a-z", :sort => "name ASC" %></p>
 <p>  <%=link_to "order by name z-a", :sort => "name DESC" %></p>
 
-<hr> 
+<hr>
 <div>
-<% @artists.each do |artist| %>
-<p><%= link_to "#{artist.name}", artist_path(artist.id) %></p>
-<% end %>
+  <% @artists.each do |artist| %>
+      <% artist.photos.each do |photo| %>
+      <%= image_tag photo.image %>
+      <p><%= link_to "#{artist.name}", artist_path(artist.id) %></p>
+      <%end %>
+
+  <% end %>
+
 </div>

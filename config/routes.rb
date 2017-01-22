@@ -3,4 +3,5 @@ root to: "artists#index"
 
   resources :artists
   resources :songs
+  resources :photos
 end
